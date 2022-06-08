@@ -117,7 +117,8 @@
         </header>
         <!--  Секция Результаты поиска -->
         <section class="catalog-hotels">
-          <h2 class="catalog-hotels-subtitle">Найдено гостиниц:<span class="catalog-hotels-counter">38</span></h2>
+          <div class="sorting-wrapper">
+            <h2 class="catalog-hotels-subtitle">Найдено гостиниц:<span class="catalog-hotels-counter">38</span></h2>
           <select class="select-control select-control-sorting" aria-label="Сортировка">
             <option value="popular">Сначала популярные</option>
             <option value="cheap" selected>Сначала дешёвые</option>
@@ -133,6 +134,7 @@
           <a class="button-switcher" href="#">
             <span class="visually-hidden">Показать список</span>
           </a>
+          </div>
           <!-- Карточки отелей -->
           <div class="hotel-wrapper">
             <article class="hotel-card">

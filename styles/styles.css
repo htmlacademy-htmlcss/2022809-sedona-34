@@ -47,6 +47,19 @@ body {
 .main-container {
   flex-grow: 1;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* Кнопки */
 .button {
   font-family: inherit;
@@ -68,33 +81,49 @@ body {
 }
 /* Навигация */
 .navigation {
+  position: relative;
   display: flex;
+  min-height: 65px;
   padding: 0 70px;
 }
 
 .logo {
-  margin-right: 30px;
+  position: absolute;
 }
 
 .navigation-list {
-  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 480px;
   margin: 0;
+  margin-left: 169px;
   padding: 0;
 
-  list-style: none;
+  list-style-type: none;
 }
 
 .navigation-user {
-  max-width: 300px;
+  max-width: 310px;
+  justify-content: end;
   margin-left: auto;
 }
 
 .navigation-link {
+  display: block;
+  padding: 19px 17px;
+
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
   text-transform: capitalize;
   color: inherit;
+}
+
+.navigation-user .navigation-link {
+  padding: 0;
+  min-width: 42px;
+  min-height: 66px;
 }
 
 .navigation-counter {
@@ -110,8 +139,11 @@ body {
 
 .navigation-item-button {
   display: block;
+  box-sizing: border-box;
   width: 160px;
   height: 37px;
+  margin-top: 14px;
+  padding: 8px 15px;
 
   font-weight: 700;
   font-size: 16px;
@@ -119,7 +151,8 @@ body {
 }
 /* Баннер */
 .banner {
-  min-height: 485px;
+  padding-top: 51px;
+  padding-bottom: 82px;
 
   background-image: url("../images/divider.svg"), url("../images/backgrounds/background-banner.jpg"), linear-gradient(0deg, rgb(130, 179, 211), rgb(255, 255, 255));
   background-repeat: no-repeat, no-repeat, no-repeat;
@@ -133,6 +166,8 @@ body {
 }
 /* Заголовок и описание секций */
 .section-title {
+  margin: 0;
+
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -141,6 +176,8 @@ body {
 }
 
 .section-desc {
+  margin: 0;
+  margin-top: 30px;
   text-align: center;
   color: #333333;
 }
@@ -153,8 +190,13 @@ body {
   color:#FFFFFF;
 }
 /* Список преимуществ */
+.advantages {
+  padding-top: 63px;
+}
+
 .advantages-list {
   margin: 0;
+  margin-top: 90px;
   padding: 0;
   list-style: none;
 }
@@ -202,11 +244,19 @@ body {
   text-align: center;
 }
 /* Поиск гостиницы */
+.hotel-search {
+  padding-top: 91px;
+  padding-bottom: 93px;
+}
+
 .hotel-search-button {
+  display: block;
+  box-sizing: border-box;
   width: 574px;
   height: 60px;
-  display: block;
   margin: 0 auto;
+  margin-top: 56px;
+  padding: 12px 15px;
 
   font-weight: 700;
   font-size: 20px;
@@ -214,16 +264,20 @@ body {
 }
 /* Подписка */
 .subscribe {
-  min-height: 411px;
+  padding: 94px 0;
 }
 
 .subscribe-background {
   background-image: url("../images/backgrounds/background-subscribe.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .subscribe-form input {
+  height: 60px;
+  padding: 0;
+  margin-top: 46px;
+
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -247,15 +301,36 @@ body {
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 0 70px;
+  align-items: center;
+  padding: 45px 70px 35px;
 }
 
 .social {
   width: 142px;
 }
 
+.social-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.social-button {
+  width: 47px;
+  height: 40px;
+}
+
 .site {
   width: 115px;
+  margin: 0;
+  padding: 0;
+}
+
+.phone-number {
+  margin: 0;
+  padding: 0;
 }
 
 .phone-number-link {
@@ -285,11 +360,14 @@ body {
 .breadcrumbs-list {
   display: flex;
   margin: 0;
+  padding: 0;
 
   list-style: none;
 }
 
 .breadcrumbs-link {
+  margin-right: 25px;
+
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
@@ -371,6 +449,11 @@ body {
   padding: 0 70px;
 }
 
+.sorting-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .hotel-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -378,7 +461,6 @@ body {
 
 .catalog-hotels-subtitle {
   display: inline-block;
-  margin-right: 191px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -386,7 +468,6 @@ body {
 
 .select-control-sorting {
   width: 290px;
-  margin-right: 78px;
 }
 
 .select-control option {
