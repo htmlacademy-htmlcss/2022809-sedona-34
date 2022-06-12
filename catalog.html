@@ -125,15 +125,17 @@
               <option value="expensive">Сначала дорогие</option>
             </select>
           <!-- Кнопки-ссылки, определяющие способ отображения результатов поиска -->
-            <a class="button-switcher button-switcher-active" href="#">
-              <span class="visually-hidden">Показать карточки</span>
-            </a>
-            <a class="button-switcher" href="#">
-              <span class="visually-hidden">Показать слайдшоу</span>
-            </a>
-            <a class="button-switcher" href="#">
-              <span class="visually-hidden">Показать список</span>
-            </a>
+            <div class="switcher-wrapper">
+              <a class="button-switcher button-switcher-active" href="#">
+                <span class="visually-hidden">Показать карточки</span>
+              </a>
+              <a class="button-switcher" href="#">
+                <span class="visually-hidden">Показать слайдшоу</span>
+              </a>
+              <a class="button-switcher" href="#">
+                <span class="visually-hidden">Показать список</span>
+              </a>
+            </div>
           </div>
           <!-- Карточки отелей -->
           <div class="hotel-wrapper">
@@ -186,7 +188,6 @@
               <span class="hotel-card-rating">Рейтинг: 5,0</span>
             </article>
           </div>
-          <hr>
           <!-- Пагинация -->
           <div class="pagination-wrapper">
             <ul class="pagination">
@@ -226,7 +227,7 @@
         <!-- Секция Подписка -->
         <section class="subscribe">
           <h2 class="section-title">Подпишитесь на рассылку</h2>
-          <p class="section-desc">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+          <p class="section-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" required>
             <button class="button button-more subscribe-button" type="submit">Подписаться</button>
