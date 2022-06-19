@@ -71,6 +71,7 @@ body {
 
   background-color: #756157;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .button-more {
@@ -82,17 +83,23 @@ body {
 }
 /* Навигация */
 .navigation {
+  position: relative;
   display: grid;
   grid-template-columns: 139px repeat(2, 1fr);
   column-gap: 30px;
   padding: 0 70px;
+  margin-bottom: -1px;
+  z-index: 5;
 }
 
 .logo {
   display: block;
   grid-column: 1 /2;
   margin-bottom: -15px;
-  z-index: 2;
+}
+
+.logo img {
+  display: block;
 }
 
 .navigation-list {
@@ -100,7 +107,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0;
+  padding: 0 17px;
 
   list-style-type: none;
 }
@@ -109,11 +116,12 @@ body {
   grid-column: 3 / 4;
   justify-content: end;
   margin-left: auto;
+  padding: 0;
 }
 
 .navigation-link {
   display: block;
-  padding: 19px 17px;
+  padding: 19px 0;
 
   font-size: 20px;
   font-weight: 700;
@@ -123,22 +131,57 @@ body {
   color: inherit;
 }
 
+.navigation-item + .navigation-item {
+  margin-left: 34px;
+}
+
+.navigation-link-current {
+  border-bottom: 2px solid #756257;
+}
+
 .navigation-user .navigation-link {
   flex-wrap: nowrap;
-  margin: 0;
   padding: 0;
-  min-width: 42px;
-  min-height: 65px;
+  width: 42px;
+  height: 65px;
+}
+
+.navigation-user .navigation-item {
+  margin-left: 0;
+}
+
+.navigation-link-search {
+  background: url('../images/icons/search.svg') no-repeat center;
+}
+
+.navigation-link-favourite {
+  background: url('../images/icons/favorite.svg') no-repeat center;
+}
+
+.navigation-item .navigation-link-favourite{
+  position: relative;
 }
 
 .navigation-counter {
+  position: absolute;
+  top: 15px;
+  left: 24px;
+
+  display: block;
+  box-sizing:border-box;
+  width: 20px;
+  height: 20px;
+  padding-top: 2.5px;
+
   font-size: 10px;
   line-height: 13px;
+  font-weight: 400;
   letter-spacing: -0.1em;
   text-align: center;
   text-transform: none;
   color: #FFFFFF;
 
+  border-radius: 10px;
   background: #7DB54F;
 }
 
@@ -204,12 +247,14 @@ body {
   margin: 0;
   margin-top: 90px;
   padding: 0;
+
   list-style-type: none;
 }
 
 .advantages-sublist {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -362,11 +407,24 @@ body {
 }
 
 .social-button {
+  position: relative;
+  display: block;
   width: 47px;
   height: 40px;
 }
 
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #7DB54F;
+}
+
 .phone-number {
+  display: flex;
   margin: 0;
   padding: 0;
 }
@@ -511,6 +569,7 @@ body {
 
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 /* Сортировка и результаты поиска */
 .catalog-hotels {
@@ -549,25 +608,45 @@ body {
 
 .switcher-wrapper {
   display: flex;
+  flex-wrap: wrap;
   margin-left: auto;
+  width: 160px;
 }
 
 .button-switcher {
   display: block;
+  box-sizing: border-box;
   width: 48px;
   height: 48px;
   margin-right: 8px;
+
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+
+.button-switcher-active {
+  border-color: #000000;
 }
 
 .button-switcher:nth-child(3n) {
   margin-right: 0;
+}
+
+.button-switcher-table {
+  background: url('../images/icons/view-table.svg') no-repeat center;
+}
+
+.button-switcher-slideshow {
+  background: url('../images/icons/view-slideshow.svg') no-repeat center;
+}
+.button-switcher-list {
+  background: url('../images/icons/view-list.svg') no-repeat center;
 }
 /* Карточки отелей */
 .hotel-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 18px;
-  /* margin-top: 61px; */
   padding: 61px 0;
 }
 
@@ -586,6 +665,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0;
+  margin-top: 16px;
 }
 
 .hotel-card-rating {
@@ -593,7 +674,6 @@ body {
   display: block;
   box-sizing: border-box;
   min-width: 140px;
-  margin-top: 16px;
   padding: 9px 15px 8px;
 
   font-size: 16px;
@@ -611,7 +691,6 @@ body {
   display: block;
   box-sizing: border-box;
   min-width: 140px;
-  margin-top: 16px;
   padding: 9px 15px 8px;
 
   font-weight: 700;
@@ -639,7 +718,6 @@ body {
 .hotel-card-price {
   display: block;
   min-width: 140px;
-  margin-top: 16px;
 
   font-size: 18px;
   line-height: 21px;
