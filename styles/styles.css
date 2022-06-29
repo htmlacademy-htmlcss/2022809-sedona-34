@@ -795,6 +795,45 @@ body {
   width: 146px;
   margin-right: 176px;
 }
+
+.control {
+  position: relative;
+  display: block;
+  margin-left: 40px;
+}
+
+.control-mark {
+  position: absolute;
+  left: -39px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.control:hover .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control:focus-visible .control-mark {
+  border: 3px solid #83B3D3;
+}
+
+.control-input:disabled + .control-mark {
+  background-color: #E6E6E6;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  background: url("../images/icons/tick.svg"), #FFFFFF;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
 /* Filter - range */
 .catalog-filter-price {
   width: 288px;
@@ -836,13 +875,13 @@ body {
 
 .catalog-filter-label:first-child::before {
   left: 112px;
-  top: 16px;
+  top: 12px;
   content: "от";
 }
 
 .catalog-filter-label:last-child::before {
   right: 17px;
-  top: 16px;
+  top: 12px;
   content: "до";
 }
 
