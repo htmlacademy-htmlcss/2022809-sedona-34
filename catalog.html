@@ -98,19 +98,19 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="visually-hidden control-input" type="radio" name="housing-type" value="hotel" checked>
+                    <input class="visually-hidden control-input" value="hotel" type="radio" name="housing-type" checked>
                     <span class="control-label">Гостиница</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="visually-hidden control-input" type="radio" name="housing-type" value="motel">
+                    <input class="visually-hidden control-input" value="motel" type="radio" name="housing-type">
                     <span class="control-label">Мотель</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="visually-hidden control-input" type="radio" name="housing-type" value="apartments">
+                    <input class="visually-hidden control-input" value="apartments" type="radio" name="housing-type">
                     <span class="control-label">Апартаменты</span>
                   </label>
                 </li>
@@ -121,10 +121,10 @@
               <div class="range">
                 <div class="range-inputs-wrapper">
                   <label class="catalog-filter-label">
-                    <input class="range-input range-input-left" type="number" value="0" name="min-price">
+                    <input class="range-input range-input-left" value="0" type="number" name="min-price">
                   </label>
                   <label class="catalog-filter-label">
-                    <input class="range-input range-input-right" type="number" value="9000" name="max-price">
+                    <input class="range-input range-input-right" value="9000" type="number" name="max-price">
                   </label>
                 </div>
                 <div class="range-scale">
@@ -184,6 +184,7 @@
                 <a href="#" class="button button-more hotel-card-favourite">в избранное</a>
               </p>
               <p class="hotel-card-content">
+                <span class="visually-hidden">Отель четыре звезды.</span>
                 <span class="rating-area">
                   <span class="rating"></span>
                   <span class="rating"></span>
@@ -207,6 +208,7 @@
                 <a href="#" class="button button-selected hotel-card-favourite">в избранном</a>
               </p>
               <p class="hotel-card-content">
+                <span class="visually-hidden">Отель четыре звезды.</span>
                 <span class="rating-area">
                   <span class="rating"></span>
                   <span class="rating"></span>
@@ -230,6 +232,7 @@
                 <a href="#" class="button button-more hotel-card-favourite">в избранное</a>
               </p>
               <p class="hotel-card-content">
+                <span class="visually-hidden">Отель три звезды.</span>
                 <span class="rating-area">
                   <span class="rating"></span>
                   <span class="rating"></span>
@@ -252,6 +255,7 @@
                 <a class="button button-more hotel-card-favourite" href="#">в избранное</a>
               </p>
               <p class="hotel-card-content">
+                <span class="visually-hidden">Отель две звезды.</span>
                 <span class="rating-area">
                   <span class="rating"></span>
                   <span class="rating"></span>
@@ -262,6 +266,7 @@
           </div>
           <!-- Search results - pagination -->
           <div class="pagination-wrapper">
+            <h3 class="visually-hidden">Перейти на страницу</h3>
             <ul class="pagination">
               <li class="pagination-item">
                 <a class="pagination-link pagination-link-current">1</a>
