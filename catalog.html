@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico"> <!-- 16×16 -->
   </head>
   <body>
     <div class="page-container">
@@ -75,21 +76,18 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" checked>
-                    <span class="control-mark"></span>
                     <span class="control-label">Бассейн</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
-                    <span class="control-mark"></span>
                     <span class="control-label">Парковка</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
-                    <span class="control-mark"></span>
                     <span class="control-label">Wi-Fi</span>
                   </label>
                 </li>
@@ -101,20 +99,19 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="housing-type" value="hotel" checked>
-                    <span class="control-mark"></span>
                     <span class="control-label">Гостиница</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="housing-type" value="motel">
-                    <span class="control-mark">Мотель</span>
+                    <span class="control-label">Мотель</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="housing-type" value="apartments">
-                    <span class="control-mark">Апартаменты</span>
+                    <span class="control-label">Апартаменты</span>
                   </label>
                 </li>
               </ul>
@@ -124,10 +121,10 @@
               <div class="range">
                 <div class="range-inputs-wrapper">
                   <label class="catalog-filter-label">
-                    <input class="range-input" type="number" value="0" name="min-price">
+                    <input class="range-input range-input-left" type="number" value="0" name="min-price">
                   </label>
                   <label class="catalog-filter-label">
-                    <input class="range-input" type="number" value="9000" name="max-price">
+                    <input class="range-input range-input-right" type="number" value="9000" name="max-price">
                   </label>
                 </div>
                 <div class="range-scale">
@@ -151,11 +148,11 @@
         <!--  Inner - search results -->
         <section class="catalog-hotels">
           <div class="sorting-wrapper">
-            <h2 class="catalog-hotels-subtitle">Найдено гостиниц:&nbsp;<span class="catalog-hotels-counter">38</span></h2>
+            <h2 class="catalog-hotels-subtitle"> Найдено гостиниц: <span>38</span></h2>
             <!-- Search results - sorting list -->
-            <select class="select-control select-control-sorting" aria-label="Сортировка">
+            <select class="select-control" aria-label="Сортировка">
               <option value="popular">Сначала популярные</option>
-              <option value="cheap" selected>Сначала дешёвые</option>
+              <option value="cheap" selected>Сначала дешевые</option>
               <option value="expensive">Сначала дорогие</option>
             </select>
             <!-- Search results - cards view -->
@@ -291,7 +288,7 @@
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
-              <option value="4">4</option>
+              <option value="4" selected>4</option>
               <option value="5">5</option>
               <option value="6">6</option>
             </select>
