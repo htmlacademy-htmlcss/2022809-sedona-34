@@ -1676,17 +1676,13 @@ img {
 .field-notice b {
   font-weight: 400;
 }
-
+/* Add to hide notice */
 .field-notice-close b {
   display: none;
 }
 /* Error message */
 .field-notice.field-warning {
   color: #FF5757;
-}
-/* Add class to hide notice */
-.field-notice.field-notice-hidden {
-  display: none;
 }
 
 .field-counter {
